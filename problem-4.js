@@ -5,5 +5,6 @@ for (let i = 0; i < arr.length; i++) {
     if (uniqueNumber.indexOf(number) == -1) {
         uniqueNumber.push(number);
     }
+
 }
-console.log(uniqueNumber);
+console.log("The unique values are", uniqueNumber);
