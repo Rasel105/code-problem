@@ -1,16 +1,14 @@
-let arr = ["1", "5", "9", "14", "5", "22", "48", "25", "22", "20", "9", "13"];
 
-let sortedArr = [];
+// 2. Find the maximum number in a jagged array given below array of numbers?
+// ans code 
+let ar = [2, 4, 10, [12, 4, [100, 99], 4], [3, 2, 99], 0];
 
-let count = 1;
-sortedArr = arr.sort(function (a, b) {
-    return a - b
-});
-for (let i = 0; i < sortedArr.length; i = i + count) {
-    count = 1;
-    for (let j = i + 1; j < sortedArr.length; j++) {
-        if (sortedArr[i] === sortedArr[j])
-            count++;
+for (let i = 0; i < ar.length; i++) {
+    for (let j = 0; j < ar[i].length; j++) {
+        let jaggedArray = ar[i][j];
+        if (Array.isArray(jaggedArray)) {
+            const maximumJaggedNumber = Math.max(...jaggedArray);
+            console.log(maximumJaggedNumber)
+        }
     }
-    console.log(sortedArr[i] + " = " + count);
 }
